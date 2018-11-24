@@ -1,1 +1,317 @@
+@import "fonts"
+@import "libs"
+@import "vars"
 
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	&.ishome
+		.site-header
+			min-height: 620px
+			height: 100vh
+			background-color:  $dark
+
+.h1, .h2, .h3, .h5, .h6
+	line-height: 1.4
+	text-transform: uppercase
+.top-line
+	padding-top: 40px
+	position: absolute
+	width: 100%
+	z-index: 1
+.logo
+	width: 125px
+	display: inline-block
+	img
+		max-width: 100%
+		height: auto
+		margin-left: 37px
+.phone
+	color: #fff
+	position: absolute
+	right: 90px
+	top: 44px
+	font-family: firasans, sans-serif
+	font-size: 20px
+	white-space: nowrap /*перенос строкового элемента*/
+.fa_m
+	color: rgba(255,255,255,.5)
+	font-family: FontAwesome
+	font-size: 20px
+	margin-right: 3px		
+section, header
+	position: relative
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat
+.hamburger
+	right: 9px
+	top: 38px
+	position: absolute
+	.hamburger-box
+		width: 34px
+
+html.mm-opened
+	overflow-y: scroll
+.mm-panels > .mm-panel.mm-hasnavbar
+	right: -18px
+.mm-listview > li:not(.mm-divider)::after
+	display: none
+.mm-menu.mm-theme-black .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview > li.mm-selected > span
+	background-color: transparent
+	color: $accent
+
+
+
+.mm-listview 
+	> li
+		> a
+			transition: color .25s ease
+			padding:
+				right: 14%
+				left: 14%
+				top: 8px
+			&:hover
+				color: $accent
+				&:before
+					color: $accent
+					
+					
+			&:before
+				content: '\f219'
+				font-family: Fontawesome
+				padding-right: 5px
+				text-decoration: none
+				font-size: 12px
+				color: #fff
+				transition: color .25s ease 
+				
+				
+		&.active
+			&>a
+				color: $accent
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	border-radius: 0
+	height: 2px
+	color: #fff
+	width: 42px
+	background-color: #fff
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
+	background-color: #fff		
+.mm-navbar 
+	height: auto
+	position: relative
+	border: none
+	.mm-title 
+		padding: 10px
+	img
+		width: 150px
+		margin: 10px 5px 25px
+.mm-panels > .mm-panel::after, .mm-panels > .mm-panel::before	
+	height: 0
+.mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview
+	margin-top: 0	
+section
+	background-color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+	
+/*текст  в шапке*/
+.header-flex
+	display: flex
+	height: 100%
+	position: relative
+	top: 0
+	font-family: 'RalewayThin', sans-serif
+.flex-center
+	margin: auto
+	 
+	.container
+		padding:  0
+		margin-bottom: 60px
+.header-compozition
+	text-align: center
+	
+	position: relative
+	color: #fff
+	.welcome-p2
+		font-family: RalewayRegular,sans-serif
+		margin-bottom: 30px
+		span
+			font-family: RalewaySemiBold,sans-serif
+.welcome	
+	
+	.welcome-p
+		text-align: center
+		display: flex
+		font-size: 14px
+		align-items: center
+		white-space: nowrap
+		margin: 0 
+		
+		text-transform: uppercase
+		span
+			margin: 0 10px
+		&::before, &::after 
+			content: ''
+			background-color: #fff
+			display: inline-block
+			vertical-align: middle
+			height: 1px
+			width: 100%
+			position: relative
+	h1
+		font-weight: 300
+		font-size: 70px
+		margin: 0
+		line-height: 1.6
+		border-bottom: 1px solid #fff
+		white-space: nowrap
+	strong
+		font-size: 14px
+		font-weight: 300
+		text-transform: uppercase
+		display: block
+		margin: 25px 0
+		font-family: RalewayRegular,sans-serif
+		.fa
+			margin-right: 5px
+			margin-left: 5px;
+			font-size: 12px
+
+.header-social
+	position: absolute
+	display: flex
+	right: 0
+	height: 100%
+	border-left: rgba(#fff, .1) 1px solid
+	padding:  0 12.5px
+	top: 0
+	.soc
+		margin: auto
+		ul,li
+			margin: 0
+			padding: 0
+			list-style-type: none
+			>a
+				color: #2c2c2c
+				font-size: 17px
+				display: block
+				background-color: rgba(#fff, .2)
+				height: 38px
+				width: 38px
+				text-align: center
+				margin: 18px 0
+				line-height: 38px
+				border-radius: 10em
+				transition: background-color .25s ease
+				&:hover
+					background-color: rgba(#fff, .4)
+.header-contact
+	position: absolute
+	bottom: 0
+	left: 0
+
+	border-top: rgba(#fff, .15) 1px solid
+	padding: 12.5px 0
+	width: 100%
+	background-color: rgba(#151515, .15)
+	.fa
+		margin-right: 5px
+		color: #555
+	.adress-h
+		font-size: 14px
+	.phone-h
+		font-family: firasans , sans-serif
+		text-align: center
+		font-size: 14px
+	.time-h
+		white-space: nowrap
+		font-size: 14px
+/*button*/
+.button
+    display: inline-block
+    border: none
+    color: #fff
+    text-decoration: none
+    background-color: $accent
+    padding: 15px 45px
+    font-size: 13px
+    text-transform: uppercase
+    font-weight: 600
+    letter-spacing: 3px
+    border-radius: 2px
+    text-align: center
+    position: relative
+    outline: none
+    transition: background-color .1s ease
+    &::after
+        transition: background-color .2s ease
+        position: absolute
+        content: ''
+        height: 4px
+        bottom: 0
+        width: 100%
+        background-color: darken($accent, 50%)
+        opacity: .18
+        border-bottom-left-radius: 2px
+        border-bottom-right-radius: 2px
+        left: 0
+    &:focus, &:hover
+        text-decoration: none
+        color: #fff
+    &:hover
+        background-color: lighten($accent, 5%)
+        &::after
+            opacity: .22
+    &:active
+        background-color: darken($accent, 5%)
+        &::after
+            opacity: .32
+@import "media" // Всегда в конце
