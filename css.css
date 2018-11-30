@@ -85,11 +85,13 @@ section, header
 	background-position: center top
 	background-repeat: no-repeat
 .hamburger
-	right: 9px
-	top: 38px
+	right: -6px
+	top: 35px
 	position: absolute
 	.hamburger-box
-		width: 34px
+		width: 40px
+		position: relative
+		display: inline-block
 
 html.mm-opened
 	overflow-y: scroll
@@ -134,7 +136,7 @@ html.mm-opened
 	border-radius: 0
 	height: 2px
 	color: #fff
-	width: 42px
+	
 	background-color: #fff
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
 	background-color: #fff		
@@ -173,7 +175,7 @@ section
 	margin: auto
 	 
 	.container
-		padding:  0
+		
 		margin-bottom: 60px
 .header-compozition
 	text-align: center
@@ -224,6 +226,7 @@ section
 			margin-right: 5px
 			margin-left: 5px;
 			font-size: 12px
+			color: rgba(255,255,255,.4)
 
 .header-social
 	position: absolute
@@ -232,6 +235,7 @@ section
 	height: 100%
 	border-left: rgba(#fff, .1) 1px solid
 	padding:  0 12.5px
+
 	top: 0
 	.soc
 		margin: auto
@@ -257,7 +261,7 @@ section
 	position: absolute
 	bottom: 0
 	left: 0
-
+	color: #fff
 	border-top: rgba(#fff, .15) 1px solid
 	padding: 12.5px 0
 	width: 100%
@@ -266,14 +270,40 @@ section
 		margin-right: 5px
 		color: #555
 	.adress-h
-		font-size: 14px
+		font-size:
 	.phone-h
 		font-family: firasans , sans-serif
 		text-align: center
-		font-size: 14px
+		font-size:
 	.time-h
 		white-space: nowrap
-		font-size: 14px
+		font-size: 
+/*карусель*/
+$colors: $blue, $red, $accent
+@for $i  from 1 through length($colors)
+	.carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+		background-color: nth($colors,$i)
+.carousel-services
+	background-color: $dark
+	&-item
+		color: #fff
+		font-size: 18px
+		font-weight: 300
+		position: relative
+		display: flex
+		flex-direction: column-reverse
+		&:hover
+			.carousel-services-image
+				opacity: 1
+	&-image
+		background-size: cover
+		background-position: center
+		opacity: .7
+		transition: opacity .5s ease
+.owl-item
+	&:nth-child(2n+2)
+		.carousel-services-item
+			flex-direction: column
 /*button*/
 .button
     display: inline-block
