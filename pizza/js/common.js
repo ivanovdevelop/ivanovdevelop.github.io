@@ -7,16 +7,16 @@
  // });
 	$('.hamburger').click(function(){
 //$('.my-menu-popup').toggleClass('vis');
-		$('.my-menu, .my-menu-popup').slideToggle('slow');
+		$('.my-menu, .my-menu-popup').slideToggle('fast');
 		//$('.my-menu-popup').toggleClass('vis');
 	//alert('sxcscsc');
 	});
    $
    ('.my-menu-popup').click(function() {
-        $('.my-menu, .my-menu-popup').slideToggle('slow');
+        $('.my-menu, .my-menu-popup').slideToggle('fast');
     });
    
-   
+
 
     $(".menu,.my-menu,.click").on("click","a", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
