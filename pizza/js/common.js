@@ -7,13 +7,13 @@
  // });
 	$('.hamburger').click(function(){
 //$('.my-menu-popup').toggleClass('vis');
-		$('.my-menu, .my-menu-popup').slideToggle('100');
+		$('.my-menu, .my-menu-popup').fadeToggle('100');
 		//$('.my-menu-popup').toggleClass('vis');
 	//alert('sxcscsc');
 	});
    $
    ('.my-menu-popup').click(function() {
-        $('.my-menu, .my-menu-popup').slideToggle('100');
+        $('.my-menu, .my-menu-popup').fadeToggle('100');
     });
    
 
