@@ -5,6 +5,7 @@
     //hamburger.classList.toggle("is-active");
     // Do something else, like open/close menu
  // });
+	 $('#before-load').find('i').fadeOut().end().delay(400).fadeOut('slow');
 	$('.hamburger').click(function(){
 //$('.my-menu-popup').toggleClass('vis');
 		$('.my-menu, .my-menu-popup').fadeToggle();
