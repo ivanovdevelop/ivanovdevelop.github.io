@@ -1,0 +1,63 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #545769;
+  line-height: 23px;
+  background: #FAFAFA; }
+
+
+
+  
+#grid { 
+  display: grid;
+  grid-template-rows: 1fr 1fr  1fr 1fr 1fr  1fr  ;
+  
+  grid-template-columns: repeat(8, 1fr) ;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  background-color: #fff;
+  grid-template-rows: 153px 153px; /* задается высота для ряда (первые 2 ряда по 100 пикс) */
+  grid-auto-rows: 153px; /* задается высота для всех последующих рядов */
+  }
+.item {
+  
+  
+
+  border: 1px #D3DFE6 solid;
+  text-align: center;
+
+}
+.content{
+  margin: 0 30px;
+}
+.cena{
+  background-color: yellow;
+  font-size: 16px;
+}
+#grid h2{
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 4px;
+  top: 3px;
+}
+#grid h3{
+  font-size: 14px;
+  
+  
+  text-align: center;
+}
+   @media (max-width: 850px) {
+    #grid{
+      grid-template-columns: repeat(4, 1fr) ;
+    }
+
+   }
+  @media (max-width: 550px){
+    #grid{
+      grid-template-columns: repeat(2, 1fr) ;
+    }    
+    }
